@@ -12,23 +12,9 @@ const faceInner = borderOuter - borderWidth; // 145
 const tickRadius = faceInner + 3; // where tick starts (outer end), +3 for visual
 const hourTickLength = 16;
 const minuteTickLength = 10;
-const numberRadius = tickRadius - hourTickLength - 14; // inside hour tick tips
 
-// clear and add cardinal numbers (12, 3, 6, 9)
+// remove any numbers (leave only lines)
 Array.from(clockEl.querySelectorAll('.number')).forEach(n => n.remove());
-const cardinalNumbers = [
-  { label: 12, deg: 0 },
-  { label: 3, deg: 90 },
-  { label: 6, deg: 180 },
-  { label: 9, deg: 270 },
-];
-cardinalNumbers.forEach(({ label, deg }) => {
-  const numberEl = document.createElement('div');
-  numberEl.className = 'number';
-  numberEl.textContent = String(label);
-  numberEl.style.transform = `translate(-50%, -50%) rotate(${deg}deg) translate(0, -${numberRadius}px) rotate(-${deg}deg)`;
-  clockEl.appendChild(numberEl);
-});
 
 // ticks
 Array.from(clockEl.querySelectorAll('.tick')).forEach(t => t.remove());
