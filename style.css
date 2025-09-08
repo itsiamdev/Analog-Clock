@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #02de89 50%, #16191e 50%);
+  }
+  .clock {
+    background: #16191e;
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    box-sizing: content-box;
+    box-shadow: 15px 15px 35px rgba(0, 0, 0, 0.2),
+      inset 0 0 30px rgba(0, 0, 0, 0.4);
+    border: 15px solid #242931;
+  }
+  /* subtle dial marks */
+  .clock::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.05);
+  }
+  .hand {
+    position: absolute;
+    background-color: #ffffff;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    transform-origin: bottom center;
+    z-index: 2;
+  }
+  .hour {
+    height: 80px;
+    width: 10px;
+    top: calc(50% - 80px);
+  }
+  .minute {
+    height: 110px;
+    width: 4px;
+    top: calc(50% - 110px);
+  }
+  .seconds {
+    height: 130px;
+    width: 2px;
+    top: calc(50% - 130px);
+    background-color: #02de89;
+  }
+  .center-dot {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background: #02de89;
+    border: 3px solid #242931;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  /* hour numbers */
+  .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 1;
+    user-select: none;
+  }
+  /* tick marks */
+  .tick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    z-index: 1;
+    transform-origin: top center;
+  }
+  .tick.hour {
+    width: 4px;
+    height: 16px;
+    background: #ffffff;
+  }
