@@ -12,7 +12,7 @@ A simple and elegant analog clock web application built using HTML, CSS, and Jav
 
 ## 🚀 Demo
 
-View the live demo: [https://iam269.github.io/Analog-Clock/](https://iam269.github.io/Analog-Clock/)
+View the live demo: [https://itsiamdev.github.io/Analog-Clock/](https://itsiamdev.github.io/Analog-Clock/)
 
 ## 🛠️ How to Run
 
